@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<file-format>
+    <converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String"/>
+    <record name="diagnosisresource">
+        <record-definition>
+            <bean name="diagnosis" class="com.nttdata.ffcustom.Diagnosis"/>
+            <line delimit =",">
+                <record-element length="0" beanref="diagnosis.id" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="diagnosis.admid" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="diagnosis.diagcode" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="diagnosis.diagdesc" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+               
+                
+            </line>
+        </record-definition>
+    </record>
+    
+</file-format>

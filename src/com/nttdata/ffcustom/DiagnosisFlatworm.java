@@ -10,7 +10,7 @@ import com.blackbear.flatworm.errors.*;
 import com.blackbear.flatworm.converters.CoreConverters;
 
 @SuppressWarnings("unused")
-public class PatientFlatworm {
+public class DiagnosisFlatworm {
     public static void main(String[] args) {
          ConfigurationReader parser = new ConfigurationReader();
          try {
@@ -20,8 +20,8 @@ public class PatientFlatworm {
              MatchedRecord results;
              while ((results = ff.getNextRecord(bufIn)) != null) {
                  
-                 if (results.getRecordName().equals("patientresource")) {
-                     System.out.println(results.getBean("patient"));
+                 if (results.getRecordName().equals("diagnosisresource")) {
+                     System.out.println(results.getBean("diagnosis"));
                  }
              }
 

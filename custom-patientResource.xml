@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<file-format>
+    <converter name="char" class="com.blackbear.flatworm.converters.CoreConverters" method="convertChar" return-type="java.lang.String"/>
+      <record name="ignoreheader">
+      <record-ident>
+            <field-ident field-start="0" field-length="9">
+                <match-string>PatientID</match-string>
+            </field-ident>
+      </record-ident>
+       <record-definition>       
+        </record-definition>
+        </record>
+      
+      
+       <record name="patientresource">
+      
+        <record-definition>
+        <bean name="patient" class="com.nttdata.ffcustom.Allresource"/>
+           <line delimit =",">
+                
+                <record-element length="0" beanref="patient.varibleArray[0]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[1]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[2]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[3]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[4]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[5]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+                <record-element length="0" beanref="patient.varibleArray[6]" type="char">
+                    <conversion-option name="justify" value="left"/>
+                </record-element>
+              
+            </line>
+        </record-definition>
+        </record>
+      
+         
+     
+            
+</file-format>
